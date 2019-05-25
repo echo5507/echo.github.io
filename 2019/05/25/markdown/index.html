@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+
+    
+
+    
+
+    <title>Markdown語法 | 教學網站</title>
+    <meta name="author" content="Echo">
+    <meta name="version" content="1.0.0">
+    <meta name="keywords" content>
+    <meta name="description" content="Markdown 介紹Markdown 是一種輕量級標記式語言， 它有純文字標記的特性，讓編寫的可讀性提高，這是在以前很多電子郵件中就已經有的寫法，而目前也有很多網站都使用 Markdown 來撰寫說明文件或是在論壇上發表文章與發送訊息。 Markdown 優點相較 HTML 之下，不會夾雜很多不必要的標籤，讓可讀性提高。不需要像程式碼一樣縮排。Markdown 缺點若使用在像 wordpress 的網站時，要調整一些樣式變化是不太方便的。需習慣 Markdown 的編輯方...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    
+    <link rel="alternate" href="/atom.xml" title="教學網站" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="https://github.com/echo5507/echo5507.github.io/raw/master/images/echp_resized.png">
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <div class="nav-mobile">
+        <button id="open-panel" class="open-panel nav-mobile-item"><i class="icon-documents"></i></button>
+        <h1 class="nav-mobile-title nav-mobile-item">教學網站</h1>
+        <button id="open-menus" class="open-panel nav-mobile-item"><i class="icon-library"></i></button>
+    </div>
+
+    <nav id="nav-inner" class="nav-inner">
+        
+            <a class="nav-item" href="/">
+                <span class="nav-text">首頁</span>
+            </a>
+        
+            <a class="nav-item" href="/tags">
+                <span class="nav-text">標籤</span>
+            </a>
+        
+            <a class="nav-item" href="/categories">
+                <span class="nav-text">分類</span>
+            </a>
+        
+            <a class="nav-item" href="/about">
+                <span class="nav-text">關於</span>
+            </a>
+        
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="https://echo5507.github.io"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown-介紹"><span class="toc-number">1.</span> <span class="toc-text">Markdown 介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-優點"><span class="toc-number">1.0.1.</span> <span class="toc-text">Markdown 優點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-缺點"><span class="toc-number">1.0.2.</span> <span class="toc-text">Markdown 缺點</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown-相關實用網站"><span class="toc-number">1.0.3.</span> <span class="toc-text">Markdown 相關實用網站</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字體"><span class="toc-number">1.1.</span> <span class="toc-text">字體</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#粗體"><span class="toc-number">1.1.1.</span> <span class="toc-text">粗體</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#標題字"><span class="toc-number">1.1.2.</span> <span class="toc-text">標題字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#次標題字"><span class="toc-number">1.1.3.</span> <span class="toc-text">次標題字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小標題字"><span class="toc-number">1.1.4.</span> <span class="toc-text">小標題字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">1.2.</span> <span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#無序清單"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">無序清單</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#有序清單"><span class="toc-number">1.2.0.2.</span> <span class="toc-text">有序清單</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CheckBox"><span class="toc-number">1.2.1.</span> <span class="toc-text">CheckBox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#區塊"><span class="toc-number">1.2.2.</span> <span class="toc-text">區塊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#程式碼"><span class="toc-number">1.2.3.</span> <span class="toc-text">程式碼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#圖片"><span class="toc-number">1.2.4.</span> <span class="toc-text">圖片</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#階層式區塊"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">階層式區塊</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#超連結"><span class="toc-number">1.2.5.</span> <span class="toc-text">超連結</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#普通連結"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">普通連結</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指向本地文件的鏈接"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">指向本地文件的鏈接</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            Markdown語法
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="https://echo5507.github.io/2019/05/25/markdown/index.html">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2019-05-25T11:48:56.000Z" itemprop="datePublished">2019-05-25</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/Markdown/">Markdown</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <h1 id="Markdown-介紹"><a href="#Markdown-介紹" class="headerlink" title="Markdown 介紹"></a>Markdown 介紹</h1><p>Markdown 是一種輕量級標記式語言， 它有純文字標記的特性，讓編寫的可讀性提高，這是在以前很多電子郵件中就已經有的寫法，而目前也有很多網站都使用 Markdown 來撰寫說明文件或是在論壇上發表文章與發送訊息。</p>
+ <a id="more"></a>
+<h3 id="Markdown-優點"><a href="#Markdown-優點" class="headerlink" title="Markdown 優點"></a>Markdown 優點</h3><ul>
+<li>相較 HTML 之下，不會夾雜很多不必要的標籤，讓可讀性提高。</li>
+<li>不需要像程式碼一樣縮排。</li>
+</ul>
+<h3 id="Markdown-缺點"><a href="#Markdown-缺點" class="headerlink" title="Markdown 缺點"></a>Markdown 缺點</h3><ul>
+<li>若使用在像 wordpress 的網站時，要調整一些樣式變化是不太方便的。</li>
+<li>需習慣 Markdown 的編輯方式。</li>
+</ul>
+<h3 id="Markdown-相關實用網站"><a href="#Markdown-相關實用網站" class="headerlink" title="Markdown 相關實用網站"></a>Markdown 相關實用網站</h3><ul>
+<li>即時編譯 Markdown 語法所顯示的版面<ul>
+<li><a href="http://markdownlivepreview.com/" target="_blank" rel="noopener">http://markdownlivepreview.com/</a></li>
+</ul>
+</li>
+<li>將 HTML 語法轉為 Markdown<ul>
+<li><a href="https://domchristie.github.io/turndown/" target="_blank" rel="noopener">https://domchristie.github.io/turndown/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="字體"><a href="#字體" class="headerlink" title="字體"></a>字體</h2><p>字體樣式是使用在一般文字中加強文字重要性，或是表示標題，粗體通常會用在一段文字中，強調某些字是這個語句中的重點，而標題字會依照字體大小來表示出這個標題的主要性，使用標題字的 Markdown 語法要特別注意 # 號越少標題越大，也就代表標題的重要性越高。</p>
+<h3 id="粗體"><a href="#粗體" class="headerlink" title="粗體"></a>粗體</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**bold**</span><br></pre></td></tr></table></figure>
+<h3 id="標題字"><a href="#標題字" class="headerlink" title="標題字"></a>標題字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 標題</span><br></pre></td></tr></table></figure>
+<h3 id="次標題字"><a href="#次標題字" class="headerlink" title="次標題字"></a>次標題字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## 次標題</span><br></pre></td></tr></table></figure>
+<h3 id="小標題字"><a href="#小標題字" class="headerlink" title="小標題字"></a>小標題字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">###### 小標題</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/25/markdown/20111449FkQfya1mSy.png" alt="GITHUB"></p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h4 id="無序清單"><a href="#無序清單" class="headerlink" title="無序清單"></a>無序清單</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* Item 1</span><br><span class="line">* Item 2</span><br><span class="line">  * Item a</span><br><span class="line">  * Item b</span><br></pre></td></tr></table></figure>
+<p>顯示畫面</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2<ul>
+<li>Item a</li>
+<li>Item b</li>
+</ul>
+</li>
+</ul>
+<h4 id="有序清單"><a href="#有序清單" class="headerlink" title="有序清單"></a>有序清單</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. Item 1</span><br><span class="line">2. Item 2</span><br><span class="line">3. Item 3</span><br></pre></td></tr></table></figure>
+<p>顯示畫面</p>
+<ol>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol>
+<h3 id="CheckBox"><a href="#CheckBox" class="headerlink" title="CheckBox"></a>CheckBox</h3><p>CheckBox 常用在確認事情是否完成，在使用 Checkbox 要注意，中括號中的 x 就代表這個項目是被打勾的，它並不會主動紀錄勾選過的內容，所以使用時要確認勾選過的內容是否有增加 ｘ，避免混亂。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- [x] This is a complete item</span><br><span class="line">- [ ] This is an incomplete item</span><br></pre></td></tr></table></figure></p>
+<p>顯示畫面<br><img src="/2019/05/25/markdown/20111449uMfOyixLZN.png" alt="GITHUB"></p>
+<h3 id="區塊"><a href="#區塊" class="headerlink" title="區塊"></a>區塊</h3><p>區塊分為小區塊跟大區塊，通常用於一段相關內容的撰寫，一小段文字或是註釋都可能會用小區塊來表示，而篇幅較大又不希望與一般段落內容混在一起的文字，就會使用大區塊來包覆。</p>
+<p>小區塊語法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`字句前後加上反引號`</span><br></pre></td></tr></table></figure></p>
+<p>大區塊語法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">前後個加四個空白</span><br></pre></td></tr></table></figure></p>
+<p>顯示畫面<br><code>字句前後加上反引號</code></p>
+<pre><code>前後個加四個空白   
+</code></pre><h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h3><p>插入程式碼語法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```js</span><br><span class="line">這邊是程式碼</span><br><span class="line">```js</span><br></pre></td></tr></table></figure></p>
+<p>顯示畫面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function myFunction(A1,A2)&#123;</span><br><span class="line">    return A1 * A2; //傳回A1乘上A2的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="圖片"><a href="#圖片" class="headerlink" title="圖片"></a>圖片</h3><p>插入圖片語法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![圖片替代文字](圖片網址)</span><br></pre></td></tr></table></figure></p>
+<p>顯示結果：<br><img src="/2019/05/25/markdown/IMG_6883_resized.jpg" alt="圖片替代文字"></p>
+<h4 id="階層式區塊"><a href="#階層式區塊" class="headerlink" title="階層式區塊"></a>階層式區塊</h4><p>階層式區塊在表現結構或功能關係上是相當好用的呈現形式</p>
+<p>階層式區塊語法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Quote one sentences</span><br><span class="line">&gt;&gt;Quote two sentences</span><br><span class="line">&gt;&gt;Quote two sentences</span><br><span class="line">&gt;&gt;&gt;Quote three sentences</span><br></pre></td></tr></table></figure></p>
+<p>顯示結果：<br><img src="/2019/05/25/markdown/201114499qQoeCIOyH.png" alt="圖片替代文字"></p>
+<h3 id="超連結"><a href="#超連結" class="headerlink" title="超連結"></a>超連結</h3><h4 id="普通連結"><a href="#普通連結" class="headerlink" title="普通連結"></a>普通連結</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">格式為[link text](URL &apos;title text&apos;)。</span><br></pre></td></tr></table></figure>
+<p>範例</p>
+<p><code>[Google](http://www.google.com/)</code></p>
+<p>顯示結果:</p>
+<p><a href="http://www.google.com/" target="_blank" rel="noopener">Google</a></p>
+<h4 id="指向本地文件的鏈接"><a href="#指向本地文件的鏈接" class="headerlink" title="指向本地文件的鏈接"></a>指向本地文件的鏈接</h4><p>範例</p>
+<p><code>[icon.gif](./images/icon.gif)</code></p>
+<p>顯示結果:</p>
+<p><a href="../markdown/icon.gif">icon.gif</a></p>
+
+        
+    </section>
+</article>
+
+
+
+</div>
+        <footer class="footer">
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e4027971a230b210f4671f485b33846a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+</footer>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var nodes = {
+            nav: $('#nav'),
+            aside: $('#aside'),
+            asideInner: $('#aside-inner'),
+            navInner: $('#nav-inner')
+        };
+
+        var doing = false;
+        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+            if (nodes.aside.hasClass('mobile-open')) {
+                nodes.aside.removeClass('mobile-open');
+            } else {
+                nodes.aside.removeClass('mobile-close panel-show');
+            }
+            doing = false;
+        });
+        $('#open-panel, #aside-mask').on('click', function() {
+            if (doing) {
+                return;
+            }
+            
+            if (nodes.aside.hasClass('panel-show')) {
+                nodes.aside.addClass('mobile-close');
+            } else {
+                nodes.aside.addClass('mobile-open panel-show');
+            }
+        });
+        $('#open-menus').on('click', function() {
+            nodes.navInner.slideToggle();
+        });
+
+        if (window.innerWidth <= 960) {
+            setTimeout(function() {
+                nodes.navInner.slideUp();
+            }, 3000);
+        }
+    });
+    </script>
+    
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
+    
+
+</body>
+</html>
