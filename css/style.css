@@ -186,8 +186,8 @@ body {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('./fonts/icomoon.eot?q628ml');
-  src: url('./fonts/icomoon.eot?q628ml#iefix') format('embedded-opentype'), url('./fonts/icomoon.ttf?q628ml') format('truetype'), url('./fonts/icomoon.woff?q628ml') format('woff'), url('./fonts/icomoon.svg?q628ml#icomoon') format('svg');
+  src: './fonts/icomoon.eot?q628ml';
+  src: './fonts/icomoon.eot?q628ml#iefix' format('embedded-opentype'), './fonts/icomoon.ttf?q628ml' format('truetype'), './fonts/icomoon.woff?q628ml' format('woff'), './fonts/icomoon.svg?q628ml#icomoon' format('svg');
   font-weight: normal;
   font-style: normal;
 }
