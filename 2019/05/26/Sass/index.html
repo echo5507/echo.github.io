@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+
+    
+
+    
+
+    <title>Sass | 教學網站</title>
+    <meta name="author" content="Echo">
+    <meta name="version" content="1.0.0">
+    <meta name="keywords" content>
+    <meta name="description" content="Sass 介紹sass是一種基於css所產生的高階語言，他將一般程式語言所擁有邏輯概念和變數帶入css樣式表中，讓我們在撰寫網站的樣式時，可以用更快速、更方便的方式撰寫。它允許你使用變量、嵌套規則、 mixins、導入等眾多功能，並且完全兼容CSS語法。Sass有助於保持大型樣式表結構良好，同時也讓你能夠快速開始小型項目，特別是在搭配 Compass樣式庫一同使用時。 Sass 語法 Sass有兩種語法。第一種被稱為SCSS (Sassy CSS)，是一個CSS3語法的擴充版本，這份參...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    
+    <link rel="alternate" href="/atom.xml" title="教學網站" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="https://github.com/echo5507/echo5507.github.io/raw/master/images/echp_resized.png">
+    
+
+    <link rel="stylesheet" href="/echo5507.github.io/css/style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <div class="nav-mobile">
+        <button id="open-panel" class="open-panel nav-mobile-item"><i class="icon-documents"></i></button>
+        <h1 class="nav-mobile-title nav-mobile-item">教學網站</h1>
+        <button id="open-menus" class="open-panel nav-mobile-item"><i class="icon-library"></i></button>
+    </div>
+
+    <nav id="nav-inner" class="nav-inner">
+        
+            <a class="nav-item" href="/echo5507.github.io/">
+                <span class="nav-text">首頁</span>
+            </a>
+        
+            <a class="nav-item" href="/echo5507.github.io/tags">
+                <span class="nav-text">標籤</span>
+            </a>
+        
+            <a class="nav-item" href="/echo5507.github.io/categories">
+                <span class="nav-text">分類</span>
+            </a>
+        
+            <a class="nav-item" href="/echo5507.github.io/about">
+                <span class="nav-text">關於</span>
+            </a>
+        
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="https://echo5507.github.io"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Sass-介紹"><span class="toc-number">1.</span> <span class="toc-text">Sass 介紹</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sass-語法"><span class="toc-number">2.</span> <span class="toc-text">Sass 語法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SCSS-語法範例"><span class="toc-number">2.1.</span> <span class="toc-text">SCSS 語法範例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SASS-語法範例"><span class="toc-number">2.2.</span> <span class="toc-text">SASS 語法範例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SASS-巢狀結構"><span class="toc-number">3.</span> <span class="toc-text">SASS 巢狀結構</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#選擇器巢狀"><span class="toc-number">3.1.</span> <span class="toc-text">選擇器巢狀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#屬性巢狀"><span class="toc-number">3.2.</span> <span class="toc-text">屬性巢狀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#偽類巢狀"><span class="toc-number">3.3.</span> <span class="toc-text">偽類巢狀</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            Sass
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="https://echo5507.github.io/2019/05/26/Sass/index.html">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2019-05-26T06:15:20.000Z" itemprop="datePublished">2019-05-26</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/echo5507.github.io/tags/Sass/">Sass</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <h1 id="Sass-介紹"><a href="#Sass-介紹" class="headerlink" title="Sass 介紹"></a>Sass 介紹</h1><p>sass是一種基於css所產生的高階語言，他將一般程式語言所擁有邏輯概念和變數帶入css樣式表中，讓我們在撰寫網站的樣式時，可以用更快速、更方便的方式撰寫。它允許你使用變量、嵌套規則、 mixins、導入等眾多功能，並且完全兼容CSS語法。Sass有助於保持大型樣式表結構良好，同時也讓你能夠快速開始小型項目，特別是在搭配 Compass樣式庫一同使用時。</p>
+ <a id="more"></a>
+<h1 id="Sass-語法"><a href="#Sass-語法" class="headerlink" title="Sass 語法"></a>Sass 語法</h1><p> Sass有兩種語法。第一種被稱為SCSS (Sassy CSS)，是一個CSS3語法的擴充版本，這份參考資料使用的就是此語法。也就是說，所有符合CSS3語法的樣式表也都是具有相同語法意義的SCSS文件。另外，SCSS理解大多數CSS hacks以及瀏覽器專屬語法，例如IE古老的filter語法。這種語種語法的樣式表文件需要以.scss擴展名。</p>
+<p>第二種比較老的語法成為縮排語法（或者就稱為”Sass”），提供了一種更簡潔的CSS書寫方式。它不使用花括號，而是通過縮排的方式來表達選擇符的嵌套層級，而且也不使用分號，而是用換行符來分隔屬性。很多人認為這種格式比SCSS更容易閱讀，書寫也更快速。縮排語法具有Sass的所有特色功能，雖然有些語法上稍有差異。使用此種語法的樣式表文件需要以.sass作為擴展名。</p>
+<h2 id="SCSS-語法範例"><a href="#SCSS-語法範例" class="headerlink" title="SCSS 語法範例"></a>SCSS 語法範例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.menu&#123;</span><br><span class="line">    ul&#123;..&#125;</span><br><span class="line">    li&#123;..&#125;</span><br><span class="line">    a &#123;..&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="SASS-語法範例"><a href="#SASS-語法範例" class="headerlink" title="SASS 語法範例"></a>SASS 語法範例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.menu</span><br><span class="line">  ul     //寫樣式必須2個空白或一個tab，且不用&#123; &#125;</span><br><span class="line">    font-size:空白30px</span><br><span class="line">    li</span><br><span class="line">      color:空白red //不需要加;</span><br></pre></td></tr></table></figure>
+<h1 id="SASS-巢狀結構"><a href="#SASS-巢狀結構" class="headerlink" title="SASS 巢狀結構"></a>SASS 巢狀結構</h1><p>巢狀結構算是最常被使用的，透過巢狀式的結構，可清楚的知道元素上下層的關聯性，同時也可減少重覆的編寫開頭。<br>Sass 的巢狀分為三種：</p>
+<h2 id="選擇器巢狀"><a href="#選擇器巢狀" class="headerlink" title="選擇器巢狀"></a>選擇器巢狀</h2><p>範例</p>
+<p>假設我們有一段這樣的結構：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span><br><span class="line">&lt;nav&gt;</span><br><span class="line">    &lt;a href=“##”&gt;Home&lt;/a&gt;</span><br><span class="line">    &lt;a href=“##”&gt;About&lt;/a&gt;</span><br><span class="line">    &lt;a href=“##”&gt;Blog&lt;/a&gt;</span><br><span class="line">&lt;/nav&gt;</span><br><span class="line">&lt;header&gt;</span><br></pre></td></tr></table></figure></p>
+<p>想選中 header 中的 a 標籤，在寫 CSS 會這樣寫：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nav a &#123;</span><br><span class="line">  color:red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">header nav a &#123;</span><br><span class="line">  color:green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>那麼在 Sass 中，就可以使用選擇器的巢狀來實現：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nav &#123;</span><br><span class="line">  a &#123;</span><br><span class="line">    color: red;</span><br><span class="line">    header &amp; &#123;</span><br><span class="line">      color:green;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="屬性巢狀"><a href="#屬性巢狀" class="headerlink" title="屬性巢狀"></a>屬性巢狀</h2><p>CSS 有一些屬性字首相同，只是字尾不一樣，比如：border-top/border-right，與這個類似的還有 margin、padding、font 等屬性。假設你的樣式中用到了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">    border-top: 1px solid red;</span><br><span class="line">    border-bottom: 1px solid green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在 Sass 中我們可以這樣寫：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.box &#123;</span><br><span class="line">  border: &#123;</span><br><span class="line">   top: 1px solid red;</span><br><span class="line">   bottom: 1px solid green;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="偽類巢狀"><a href="#偽類巢狀" class="headerlink" title="偽類巢狀"></a>偽類巢狀</h2><p>和屬性巢狀非常類似，只不過他需要藉助<code>&amp;</code>符號一起配合使用。我們就拿經典的“clearfix”為例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.clearfix&#123;</span><br><span class="line">&amp;:before,</span><br><span class="line">&amp;:after &#123;</span><br><span class="line">    content:&quot;&quot;;</span><br><span class="line">    display: table;</span><br><span class="line">  &#125;</span><br><span class="line">&amp;:after &#123;</span><br><span class="line">    clear:both;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>編譯出來的 CSS：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clearfix:before, .clearfix:after &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  display: table;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix:after &#123;</span><br><span class="line">  clear: both;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+        
+    </section>
+</article>
+
+
+
+</div>
+        <footer class="footer">
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e4027971a230b210f4671f485b33846a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+</footer>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var nodes = {
+            nav: $('#nav'),
+            aside: $('#aside'),
+            asideInner: $('#aside-inner'),
+            navInner: $('#nav-inner')
+        };
+
+        var doing = false;
+        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+            if (nodes.aside.hasClass('mobile-open')) {
+                nodes.aside.removeClass('mobile-open');
+            } else {
+                nodes.aside.removeClass('mobile-close panel-show');
+            }
+            doing = false;
+        });
+        $('#open-panel, #aside-mask').on('click', function() {
+            if (doing) {
+                return;
+            }
+            
+            if (nodes.aside.hasClass('panel-show')) {
+                nodes.aside.addClass('mobile-close');
+            } else {
+                nodes.aside.addClass('mobile-open panel-show');
+            }
+        });
+        $('#open-menus').on('click', function() {
+            nodes.navInner.slideToggle();
+        });
+
+        if (window.innerWidth <= 960) {
+            setTimeout(function() {
+                nodes.navInner.slideUp();
+            }, 3000);
+        }
+    });
+    </script>
+    
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
+    
+
+</body>
+</html>
