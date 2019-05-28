@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Sass]]></title>
+    <url>%2Fecho5507.github.io%2F2019%2F05%2F26%2FSass%2F</url>
+    <content type="text"><![CDATA[Sass 介紹sass是一種基於css所產生的高階語言，他將一般程式語言所擁有邏輯概念和變數帶入css樣式表中，讓我們在撰寫網站的樣式時，可以用更快速、更方便的方式撰寫。它允許你使用變量、嵌套規則、 mixins、導入等眾多功能，並且完全兼容CSS語法。Sass有助於保持大型樣式表結構良好，同時也讓你能夠快速開始小型項目，特別是在搭配 Compass樣式庫一同使用時。 Sass 語法 Sass有兩種語法。第一種被稱為SCSS (Sassy CSS)，是一個CSS3語法的擴充版本，這份參考資料使用的就是此語法。也就是說，所有符合CSS3語法的樣式表也都是具有相同語法意義的SCSS文件。另外，SCSS理解大多數CSS hacks以及瀏覽器專屬語法，例如IE古老的filter語法。這種語種語法的樣式表文件需要以.scss擴展名。 第二種比較老的語法成為縮排語法（或者就稱為”Sass”），提供了一種更簡潔的CSS書寫方式。它不使用花括號，而是通過縮排的方式來表達選擇符的嵌套層級，而且也不使用分號，而是用換行符來分隔屬性。很多人認為這種格式比SCSS更容易閱讀，書寫也更快速。縮排語法具有Sass的所有特色功能，雖然有些語法上稍有差異。使用此種語法的樣式表文件需要以.sass作為擴展名。 SCSS 語法範例12345.menu&#123; ul&#123;..&#125; li&#123;..&#125; a &#123;..&#125;&#125; SASS 語法範例12345.menu ul //寫樣式必須2個空白或一個tab，且不用&#123; &#125; font-size:空白30px li color:空白red //不需要加; SASS 巢狀結構巢狀結構算是最常被使用的，透過巢狀式的結構，可清楚的知道元素上下層的關聯性，同時也可減少重覆的編寫開頭。Sass 的巢狀分為三種： 選擇器巢狀範例 假設我們有一段這樣的結構：1234567&lt;header&gt;&lt;nav&gt; &lt;a href=“##”&gt;Home&lt;/a&gt; &lt;a href=“##”&gt;About&lt;/a&gt; &lt;a href=“##”&gt;Blog&lt;/a&gt;&lt;/nav&gt;&lt;header&gt; 想選中 header 中的 a 標籤，在寫 CSS 會這樣寫：1234567nav a &#123; color:red;&#125;header nav a &#123; color:green;&#125; 那麼在 Sass 中，就可以使用選擇器的巢狀來實現：12345678nav &#123; a &#123; color: red; header &amp; &#123; color:green; &#125; &#125; &#125; 屬性巢狀CSS 有一些屬性字首相同，只是字尾不一樣，比如：border-top/border-right，與這個類似的還有 margin、padding、font 等屬性。假設你的樣式中用到了：1234.box &#123; border-top: 1px solid red; border-bottom: 1px solid green;&#125; 在 Sass 中我們可以這樣寫：123456.box &#123; border: &#123; top: 1px solid red; bottom: 1px solid green; &#125;&#125; 偽類巢狀和屬性巢狀非常類似，只不過他需要藉助&amp;符號一起配合使用。我們就拿經典的“clearfix”為例：1234567891011.clearfix&#123;&amp;:before,&amp;:after &#123; content:&quot;&quot;; display: table; &#125;&amp;:after &#123; clear:both; overflow: hidden; &#125;&#125; 編譯出來的 CSS：12345678clearfix:before, .clearfix:after &#123; content: &quot;&quot;; display: table;&#125;.clearfix:after &#123; clear: both; overflow: hidden;&#125; SASS 變數網頁CSS都常見到重複的數值，未來如果更改其中一項，其他也都要全都找出來，非常浪費時間，因此SASS「變數」就是來處理這樣的狀況。 變數使用方式範例:假設我們樣是必須套用顏色是相同的1234567891011.header&#123; color:red;&#125;.body&#123; color:red;&#125;.menu&#123; color:red;&#125; 在sass中，我們可以這樣表達:12345678910111213$color-text:red; // 設定變數：「$」+「變數」 ，在這宣告一個變數，存放&quot;紅色&quot;。.header&#123; color:$color-text; //顏色數值替換成「變數」&#125;.body&#123; color:$color-text; &#125;.menu&#123; color:$color-text;&#125; 下圖左邊為SCSS，右邊為輸出的CSS，輸出顏色與設定的變數顏色是一樣的： 範例:也可以將數值資料進行加減乘除運算12345678910111213$font-size-text:30px; //在這宣告一個變數，存放30px。.header&#123; font-size:$font-size-text; &#125;.body&#123; font-size:$font-size-text/10; //將變數資料除10，得到3px。&#125;.menu&#123; font-size:$font-size-text+10px; //將變數資料+10px，得到40px。&#125; 下圖左邊為SCSS，右邊為輸出的CSS，計算輸出變數是一樣的： Sass HSL functionDarken &amp; Lighten 明亮度利用 Darken &amp; Lighten 可以調整顏色的色彩明亮度 範例 先定義一個顏色 #F09671再定義一個變數叫做$color1$color:#F09671; //將此顏色放入變數內另用Darken調整暗的程度:darken($color,5%) = #ee855adarken($color,10%) = #eb7443darken($color,15%) = #e9632c 另用Lighten調整亮的程度:Lighten($color,5%) = #f2a788Lighten($color,10%) = #f5b89fLighten($color,15%) = #f7c9b6]]></content>
+      <categories>
+        <category>層疊樣式表語言</category>
+      </categories>
+      <tags>
+        <tag>Sass</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown語法]]></title>
+    <url>%2Fecho5507.github.io%2F2019%2F05%2F25%2Fmarkdown%2F</url>
+    <content type="text"><![CDATA[Markdown 介紹Markdown 是一種輕量級標記式語言， 它有純文字標記的特性，讓編寫的可讀性提高，這是在以前很多電子郵件中就已經有的寫法，而目前也有很多網站都使用 Markdown 來撰寫說明文件或是在論壇上發表文章與發送訊息。 Markdown 優點 相較 HTML 之下，不會夾雜很多不必要的標籤，讓可讀性提高。 不需要像程式碼一樣縮排。 Markdown 缺點 若使用在像 wordpress 的網站時，要調整一些樣式變化是不太方便的。 需習慣 Markdown 的編輯方式。 Markdown 相關實用網站 即時編譯 Markdown 語法所顯示的版面 http://markdownlivepreview.com/ 將 HTML 語法轉為 Markdown https://domchristie.github.io/turndown/ 字體字體樣式是使用在一般文字中加強文字重要性，或是表示標題，粗體通常會用在一段文字中，強調某些字是這個語句中的重點，而標題字會依照字體大小來表示出這個標題的主要性，使用標題字的 Markdown 語法要特別注意 # 號越少標題越大，也就代表標題的重要性越高。 粗體1**bold** 標題字1# 標題 次標題字1## 次標題 小標題字1###### 小標題 列表無序清單1234* Item 1* Item 2 * Item a * Item b 顯示畫面 Item 1 Item 2 Item a Item b 有序清單1231. Item 12. Item 23. Item 3 顯示畫面 Item 1 Item 2 Item 3 表格Markdown製作表格使用|來分隔不同的單元格，使用-來分隔表頭和其他行。 單元格和表頭範例1234name | age---- | ---LearnShare | 12Mike | 32 顯示畫面 name age LearnShare 12 Mike 32 為了美觀，可以使用空格對齊不同行的單元格，並在左右兩側都使用|來標記單元格邊界：1234| name | age || ---------- | --- || LearnShare | 12 || Mike | 32 | 顯示畫面 name age LearnShare 12 Mike 32 對齊在表頭下方的分隔線標記中加入:，即可標記下方單元格內容的對齊方式： :--- 代表左對齊 :--: 代表居中對齊 ---: 代表右對齊 1234| left | center | right || :--- | :----: | ----: || aaaa | bbbbbb | ccccc || a | b | c | left center right aaaa bbbbbb ccccc a b c 如果不使用對齊標記，單元格中的內容默認左對齊；表頭單元格中的內容會一直居中對齊（不同的實現可能會有不同表現）。 插入其他內容1234| name | age | blog || ------------ | --- | -------------------------------------|| GOOGLE | 12 | [GOOGLE](https://www.google.com.tw/) || YAHOO | 32 | [YAHOO](http://www.yahoo.com.tw) | name age blog GOOGLE 12 GOOGLE YAHOO 32 YAHOO CheckBoxCheckBox 常用在確認事情是否完成，在使用 Checkbox 要注意，中括號中的 x 就代表這個項目是被打勾的，它並不會主動紀錄勾選過的內容，所以使用時要確認勾選過的內容是否有增加 ｘ，避免混亂。12- [x] This is a complete item- [ ] This is an incomplete item 顯示畫面 區塊區塊分為小區塊跟大區塊，通常用於一段相關內容的撰寫，一小段文字或是註釋都可能會用小區塊來表示，而篇幅較大又不希望與一般段落內容混在一起的文字，就會使用大區塊來包覆。 小區塊語法：1`字句前後加上反引號` 大區塊語法：1前後個加四個空白 顯示畫面字句前後加上反引號 前後個加四個空白 程式碼插入程式碼語法123```js這邊是程式碼```js 顯示畫面123function myFunction(A1,A2)&#123; return A1 * A2; //傳回A1乘上A2的值&#125; 圖片插入圖片語法1![圖片替代文字](圖片網址) 顯示結果： 階層式區塊階層式區塊在表現結構或功能關係上是相當好用的呈現形式 階層式區塊語法：1234&gt; Quote one sentences&gt;&gt;Quote two sentences&gt;&gt;Quote two sentences&gt;&gt;&gt;Quote three sentences 顯示結果： 超連結普通連結1格式為[link text](URL &apos;title text&apos;)。 範例 [Google](http://www.google.com/) 顯示結果: Google 指向本地文件的鏈接範例 [icon.gif](./images/icon.gif) 顯示結果: icon.gif]]></content>
+      <categories>
+        <category>標記式語言</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[股東權益內容]]></title>
+    <url>%2Fecho5507.github.io%2F2019%2F05%2F24%2F%E8%82%A1%E6%9D%B1%E6%AC%8A%E7%9B%8A%E5%85%A7%E5%AE%B9%2F</url>
+    <content type="text"><![CDATA[股東權益組成項目資產總額減去負債總額後的淨資產稱為權益，在公司稱為股東權益 (Stockholders’ equity)。權益應區分為股本、資本公積、保留盈餘、其他權益 及庫藏股票，其中股本和資本公積合稱為「投入資本」。分別說明如下： 股本指公司向主管機關辦理登記之資本額，即「法定資本」，非經增資或減資手續，不得任意增減。 普通股股本普通股本也稱普通股權，是指股東已按普通股票的票面價值或設定價值認購的股本。 在對公司的收入以及資產的索取權優先次序上，普通股股東排在債權人以及優先股股東之後。比如，公司必須先償付債券及貸款的利息以及優先股的股息，方可分配股息予普通股股東。而一旦公司清盤，資產變現後的所得，必須先清償所有債權人以及優先股股東，剩下的才屬普通股股東所有。公司的董事由普通股股東任命，一張普通股代表一單位的投票權。普通股因為容易換手，二手市場活躍，是最為普及的證券。 特別股股本特別股票指與普通股股票持有人的權利不相同的股份，包括優先股、混合股、後配股、可轉換股、可贖回股等股票。 特別股息高於普通股且分配股息和公司剩餘財產的順序先於普通股、享有的權利應在章程中規定。股份公司有權在適當的時期，收回特別股，收回的條件和時間。 資本公積資本公積是企業收到的投資者的超出其在企業註冊資本所占份額，以及直接計入所有者權益的利得和損失等。 股票發行溢價超過票面金額發行股票所得之溢價， 可分作： 資本公積－普通股股票溢價 資本公積－特別股股票溢價 庫藏股票交易指公司出售庫藏 股票時，若售價高於收回成本產生之溢價。 受領股東贈與股東贈送本公司已發行之股票為「資本公積－受領股東贈與」。 保留盈餘指公司歷年累積之損益、未以現金或其他資產方式分配給股東或轉為資本而仍保留於公司者。 法定盈餘公積法定盈餘公積金統一規定必須提取的公積金，它的提取順序在彌補虧損之後，按當年稅後利潤的10%提取。盈餘公積金已達到註冊資本50%時不再提取。非公司制企業法定盈餘公積的提取比例可超過凈利潤的10%。 特別盈餘公積特別盈餘公積，係指企業依照自己的章程或股東會盈餘分 派之決議，而自盈餘中指撥暫不發放給投資者的部份。企業自行指撥盈餘之目的，係在限制企業分派股息及紅利給投資者，而把企業的資金保留在企業，備供營運。 未分配盈餘企業未作分配的利潤。它在以後年度可繼續進行分配，在未進行分配之前，屬於所有者權益的組成部分。從數量上來看，未分配利潤是期初未分配利潤加上本期實現的凈利潤，減去提取的各種盈餘公積和分出的利潤後的餘額。 未分配利潤有兩層含義： 留待以後年度處理的利潤 未指明特定用途的利潤。相對於所有者權益的其他部分來說，企業對於未分配利潤的使用有較大的自主權。 其他權益指其他造成權益加減變動的項目。 庫藏股票指公司收回自己流通在外且尚未註銷之股票的成本，應列為權益之減項。]]></content>
+      <categories>
+        <category>中級會計學</category>
+      </categories>
+      <tags>
+        <tag>公司會計</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[加值型營業稅]]></title>
+    <url>%2Fecho5507.github.io%2F2019%2F05%2F24%2F%E5%8A%A0%E5%80%BC%E5%9E%8B%E7%87%9F%E6%A5%AD%E7%A8%85%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[公司概念]]></title>
+    <url>%2Fecho5507.github.io%2F2019%2F05%2F24%2F%E6%B8%AC%E8%A9%A6%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[公司組成要素我國公司法第1條規定，公司的構 成要件有三: 公司應以營利為目的 公司應依照公司法組織、登記、成立 公司為社團法人 法人為法律上賦予其人格，並在法令範圍內享有權利及負擔義務的主體。 法人又可分為社團法人及財團法人 法人類型 成立要件 舉例 社團法人 以「人」的聚集 公司組織 財團法人 以「財產」的聚集 基金會 公司的種類依公司法第2條規定，公司分為下列四種： 公司型態 股東人數 責任 有限公司 1人以上 有限（以出資額為限） 無限公司 2人以上 無限清償責任 兩合公司 1人以上無限責任股東與1人以上有限責任股東 無限責任股東連（帶無限清償責任）有限責任股東有限（以出資額為限） 股份有限公司 2人以上股東 或 政府、法人股東1人 有限（就其所認股分為限） 閉鎖型公司 我國於104年7月1日增訂閉鎖性股份有限公司之法規。閉鎖性股份有限公司指的是股東人數不超過50人，且在公司章程明定股份轉讓限制之非公開發行股票公司。這是在既有的股份有限公司制度下，再新增的特殊公司組織。 新修正通過條文也明訂，發起人的出資除現金外，得以公司所需財產、技術、勞務或信用抵充，惟以勞務或信用抵充的股數，不得超過公司發行股份總數的一定比例。此外，為提供新創事業的發起人及股東在股權方面有更自由的規劃空間，新修正通過條文引進國外無票面金額股制度，並由公司自行審酌擇一採行票面金額股或無票面金額股；並允許閉鎖性股份有限公司透過章程規定，發行複數表決權特別股或對特定事項有否決權的特別股等。 閉鎖性股份有限公司 一般股份有限公司 出資種類 得以公司事業所需之財產、技術、 勞務或信用抵充。 不得以勞務或信用出資 股票面額 得發行無面值股。 不得發行無面值股。 股份有限公司之特質 發行股票：將資本劃分為股份，每股金額一律相同，以股票之發行，表彰股東所擁有的權益。 股東的責任有限，籌資容易：股東所負責任僅就其所認之股份額為 限；責任風險由多位股東共同負擔而減輕，且資本劃分為面額較小之股 份，容易向一般投資大眾募集資金，使企業規模較易擴大。 股份可自由轉讓：依公司法第163條之規定，公司股份之轉讓不得以章 程禁止或限制。 所有權和經營權分離：股東握有公司所有權，而董事（由股東選出）握 有公司經營權，透過所有權和經營權的分離，公司組織不受股東變動而影響。]]></content>
+      <categories>
+        <category>中級會計學</category>
+      </categories>
+      <tags>
+        <tag>公司會計</tag>
+      </tags>
+  </entry>
+</search>
